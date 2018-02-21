@@ -73,7 +73,7 @@ namespace segment_tree{
       //This function queries for a range[l:r] based value in the segmentTree
       type_stree rangeQuery(int v, int tl, int tr, int l, int r){
         if(l>r)
-          return make_node(default_val);
+          return default_val;//--------------------------instead of make_node() directly return as it is of 'type_stree' type
         if(tl==l && tr==r)
           return stree[v];
         int tm=(tl+tr)>>1;
